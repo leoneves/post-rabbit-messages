@@ -1,0 +1,15 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Include:
+    - config.ru
+  Exclude:
+    - db/**
+    - config/**
+    - script/**
+    - 'Gemfile'
+    - Rakefile
+    - spec/test_worker.rb
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 140

@@ -1,0 +1,39 @@
+defaults: &defaults
+  host: 'localhost'
+  port: 5672
+  exchange: 'thundercats.messages'
+  vhost: '/'
+  user: 'guest'
+  password: 'guest'
+  log_level: 2
+  log_filename: rabbitmq.log
+  log_age: daily
+
+development:
+  <<: *defaults
+
+staging:
+  host: 'messages-multirecarga.dev.bfa.m4u'
+  port: 5672
+  exchange: 'thundercats.messages'
+  vhost: '/'
+  user: 'tygra'
+  password: 'tygra123'
+  log_level: 2
+  log_filename: rabbitmq.log
+  log_age: daily
+
+test:
+  <<: *defaults
+  host: 'localhost'
+
+production:
+  host: ['10.18.13.92', '10.18.12.92']
+  port: 5672
+  exchange: 'thundercats.messages'
+  vhost: '/'
+  user: 'tygra'
+  password: 'tygra123'
+  log_level: 2
+  log_filename: rabbitmq.log
+  log_age: daily

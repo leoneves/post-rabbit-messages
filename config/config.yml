@@ -1,0 +1,16 @@
+defaults: &defaults
+  file_path: to_delete
+  file_name: customers_shall_to_be_deleted
+  log_level: info
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  file_path: spec/to_delete
+  file_name: customers_shall_to_be_deleted_test
+
+production:
+  <<: *defaults
+  file_name: customers_shall_to_be_deleted
