@@ -13,7 +13,7 @@ development:
   <<: *defaults
 
 staging:
-  host: 'messages-multirecarga.dev.bfa.m4u'
+  host: 'xxxxxx-xxxx'
   port: 5672
   exchange: 'thundercats.messages'
   vhost: '/'
@@ -28,7 +28,7 @@ test:
   host: 'localhost'
 
 production:
-  host: ['10.18.13.92', '10.18.12.92']
+  host: ['x.x.x.x', 'x.x.x.x']
   port: 5672
   exchange: 'thundercats.messages'
   vhost: '/'
